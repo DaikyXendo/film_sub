@@ -3,7 +3,7 @@ import time
 
 trans = Translator()
 
-file_path = "/Users/thanhlevan/Documents/code/FilmSub/12_fail/12th_fail.srt"
+file_path = "/Users/thanhlevan/Documents/code/FilmSub/Nayakan/Nayagan.srt"
 
 
 def translate_text(text):
@@ -42,6 +42,7 @@ with open(file_path, "r", encoding="utf-8") as file:
     for box in file.read().split("\n\n"):
         list_text = box.split("\n")
         speech = " ".join(list_text[2:])
+        print(speech)
 
         translate_result = ""
         if speech.startswith("<i>"):
